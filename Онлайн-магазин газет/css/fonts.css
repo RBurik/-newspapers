@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-display: swap;
+  src: url("../fonts/RobotoMono-Regular.woff") format("woff"), url("../fonts/RobotoMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-display: swap;
+  src: url("../fonts/RobotoMono-Medium.woff") format("woff"), url("../fonts/RobotoMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "Pobeda";
+  font-display: swap;
+  src: url("../fonts/pobeda-regular.woff") format("woff"), url("../fonts/pobeda-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pobeda";
+  font-display: swap;
+  src: url("../fonts/pobeda-bold.woff") format("woff"), url("../fonts/pobeda-bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Red October";
+  font-display: swap;
+  src: url("../fonts/RedOctober-Fat.woff") format("woff"), url("../fonts/RedOctober-Fat.woff2") format("woff2");
+  font-weight: 900;
+  font-style: fat;
+}
+
+@font-face {
+  font-family: "Red October";
+  font-display: swap;
+  src: url("../fonts/RedOctober-Regular.woff") format("woff"), url("../fonts/RedOctober-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: regular;
+}

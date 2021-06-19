@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя история — Бутик винтажных подарков</title>
+  <link rel="stylesheet" href="css/order.min.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="menu mob">
+  <nav class="nav nav-page">
+    <a href="#">Газеты</a>
+    <a href="#">Календари</a>
+    <a href="#">Карты</a>
+    <a href="#">Упаковки</a>
+    <a href="#">Доставка и оплата</a>
+    <a href="#">Акции</a>
+    <a href="#">О нас</a>
+  </nav>
+  <a href="tel:+74952551140" class="nav-block tel">+7 (495) 255-11-40</a>
+  <nav class="nav-block social-links">
+    <a href="#"><img src="img/whatsapp-red.svg" alt=""></a>
+    <a href="#"><img src="img/telegram-red.svg" alt=""></a>
+    <a href="#"><img src="img/vk-red.svg" alt=""></a>
+    <a href="#"><img src="img/facebook-red.svg" alt=""></a>
+    <a href="#"><img src="img/instagram-red.svg" alt=""></a>
+  </nav>
+  <div class="rules">
+    <a href="#">Политика конфиденциальности</a>
+    <a href="#">Условия подписки</a>
+  </div>
+</div>
+  <header class="header">
+  <button class="burger mob"></button>
+  <nav class="nav nav-page pc">
+    <a href="#">Газеты</a>
+    <a href="#">Календари</a>
+    <a href="#">Карты</a>
+    <a href="#">Упаковки</a>
+    <a href="#">Доставка и оплата</a>
+    <a href="#">О нас</a>
+  </nav>
+  <a href="index.html" class="logo">
+    <img src="img/logo.png" alt="Logotype">
+  </a>
+  <nav class="nav nav-UI">
+    <a href="tel:+74952551140" class="nav-block tel pc">+7 (495) 255-11-40</a>
+    <ul class="nav-block social-links pc">
+      <li><a href="#"><img src="img/whatsapp.svg" alt=""></a></li>
+      <li><a href="#"><img src="img/telegram.svg" alt=""></a></li>
+      <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+      <li><a href="#"><img src="img/facebook.svg" alt=""></a></li>
+      <li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+    </ul>
+    <a href="#" class="nav-block cart" data-index='0'><img src="img/shopping-cart.svg" alt=""></a>
+  </nav>
+</header>
+
+  <section class="section section-order">
+    <h1 class="section-title">Оформление заказа</h1>
+    <div class="container">
+      <form id="form" class="inputs">
+        <div class="fieldset">
+          <label for="">ФИО</label>
+          <input type="text" placeholder="Сергей Иванови Разумович">
+        </div>
+        <div class="fieldset">
+          <label for="">Телефон</label>
+          <input type="text" class="phone" placeholder="+7 (___)___-__-__">
+        </div>
+        <div class="fieldset">
+          <label for="">Эл. почта</label>
+          <input type="text" placeholder="ivanov@mail.ru">
+        </div>
+        <div class="fieldset">
+          <label for="">Выберите способ доставки</label>
+          <div class="selectWrapper">
+            <p class="selected">Доставка г. Москва (300 руб. / Бесплатно от 5000 руб.)</p>
+            <img src="img/arrow-min.svg" alt="" class="arrow">
+            <ul>
+              <li class="menu-item">Доставка г. Москва (300 руб. / Бесплатно от 1000 руб.)</li>
+              <li class="menu-item">Доставка г. Москва (300 руб. / Бесплатно от 2000 руб.)</li>
+              <li class="menu-item">Доставка г. Москва (300 руб. / Бесплатно от 3000 руб.)</li>
+              <li class="menu-item">Доставка г. Москва (300 руб. / Бесплатно от 4000 руб.)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fieldset">
+          <label for="">Адрес доставки</label>
+          <input type="text" placeholder="Набережная, д.54">
+        </div>
+        <div class="fieldset">
+          <label for="">Дата и время доставки</label>
+          <div class="wrapper">
+            <label for=""><span>День/Месяц</span>
+              <input type="text" placeholder="__.__" class="day_month">
+            </label>
+            <span>С</span>
+            <label for=""><span>Часов</span>
+              <input type="text" placeholder="08" class="time">
+            </label>
+            <span>До</span>
+            <label for=""><span>Часов</span>
+              <input type="text" placeholder="20" class="time">
+            </label>
+          </div>
+          <!-- /.wrapper -->
+        </div>
+        <div class="fieldset">
+          <label for="">Выберите способ оплаты</label>
+          <div class="selectWrapper">
+            <p class="selected">Онлайн оплата</p>
+            <img src="img/arrow-min.svg" alt="" class="arrow">
+            <ul>
+              <li class="menu-item">Онлайн оплата</li>
+              <li class="menu-item">Онлайн оплата</li>
+              <li class="menu-item">Онлайн оплата</li>
+              <li class="menu-item">Онлайн оплата</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fieldset">
+          <label for="">Коментарий к заказу</label>
+          <textarea placeholder="Комментарий"></textarea>
+        </div>
+      </form>
+      <aside class="info">
+        <h2 class="section-title">Ваш заказ</h2>
+        <div class="order">
+          <div class="product">
+            <img src="img/tubus.jpg" alt="">
+            <div class="content">
+              <h3 class="product-title">Газета «Правда»</h3>
+              <p class="date">24 декабря 1964</p>
+              <p class="wrapper">Конверт пластиковый (0р.)</p>
+              <p class="price">1200 руб.</p>
+            </div>
+            <!-- /.content -->
+          </div>
+          <!-- /.product -->
+          <div class="product">
+            <img src="img/tubus.jpg" alt="">
+            <div class="content">
+              <h3 class="product-title">Газета «Правда»</h3>
+              <p class="date">24 декабря 1964</p>
+              <p class="wrapper">Конверт пластиковый (0р.)</p>
+              <p class="price">1200 руб.</p>
+            </div>
+            <!-- /.content -->
+          </div>
+          <!-- /.product -->
+          <div class="product">
+            <img src="img/tubus.jpg" alt="">
+            <div class="content">
+              <h3 class="product-title">Газета «Правда»</h3>
+              <p class="date">24 декабря 1964</p>
+              <p class="wrapper">Конверт пластиковый (0р.)</p>
+              <p class="price">1200 руб.</p>
+            </div>
+            <!-- /.content -->
+          </div>
+          <!-- /.product -->
+          <div class="orderInfo">
+            <p class="payment">онлайн</p>
+            <p class="delivery">300 руб.</p>
+            <p class="generalPrice">5400 руб.</p>
+          </div>
+          <!-- /.orderInfo -->
+          <button form="form" class="btn btnRed">Подтвердить</button>
+        </div>
+        <!-- /.order -->
+        <div class="privacy">
+          <div class="fieldset">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">Нажимая на кнопку, вы соглашаетесь
+              с <a href="#">Политикой конфиденциальности</a> и <a href="#">Условиями
+                подписки</a></label>
+          </div>
+          <p class="desc">*Доставка заказов, принятых на выходных и праздничных днях, осуществляется на следующий
+            рабочий день, с учетом графика работы магазина.</p>
+        </div>
+        <a href="#" class="back"><img src="img/arrow-red.svg" alt="">Назад</a>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Logotype">
+    </a>
+    <nav class="nav-page">
+      <a href="#">Газеты</a>
+      <a href="#">Календари</a>
+      <a href="#">Карты</a>
+      <a href="#">Доставка и оплата</a>
+      <a href="#">Акции</a>
+      <a href="#">О нас</a>
+      <a href="#">Политика конфиденциальности</a>
+      <a href="#">Условия подписки</a>
+    </nav>
+    <hr>
+    <div class="bottomUI">
+      <span class="copyright">© 2016. «Газета в подарок»</span>
+      <nav class="nav-socLinks">
+        <a href="#"><img src="img/whatsapp-wh.svg" alt=""></a>
+        <a href="#"><img src="img/telegram-wh.svg" alt=""></a>
+        <a href="#"><img src="img/vk-wh.svg" alt=""></a>
+        <a href="#"><img src="img/facebook-wh.svg" alt=""></a>
+        <a href="#"><img src="img/instagram-wh.svg" alt=""></a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/order.min.js"></script>
+</body>
+
+</html>
