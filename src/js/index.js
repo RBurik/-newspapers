@@ -60,6 +60,17 @@ $(document).ready(function () {
     $('.header').toggleClass('active');
   })
 
+  if ($(window).width() <= 480) {
+    $('html').css('min-width', $(window).width());
+    $('html').css('max-width', $(window).width());
+
+    $('body').css('min-width', $(window).width());
+    $('body').css('max-width', $(window).width());
+
+    $('.overflow').css('min-width', $(window).width());
+    $('.overflow').css('max-width', $(window).width());
+  }
+
   // Widget Calendar
   let $year; // Год, на который нажал пользователь
   let $month; // Месяц, на который нажал пользователь
