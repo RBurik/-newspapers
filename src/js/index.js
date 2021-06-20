@@ -50,11 +50,13 @@ $(document).ready(function () {
   });
 
   // Safari Overflow
-  if ($(window).width() <= 480) {
-    let $width = $('.header').width();
-    $('html, body').css('max-width', $width);
-    console.log($width);
-  }
+  setTimeout(function() {
+    if ($(window).width() <= 480) {
+      let $width = $('.header').width();
+      $('html, body').css('max-width', $width);
+      console.log($width);
+    }
+  }, 1000)
 
   // Mobile Menu
   $('.burger').on("click", function () {
