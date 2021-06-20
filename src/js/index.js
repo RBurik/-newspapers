@@ -51,8 +51,8 @@ $(document).ready(function () {
 
   // Safari Overflow
   if ($(window).width() <= 480) {
-    let $width = $(window).width();
-    $('html, body').css('max-width', $width);
+    // let $width = $(window).width();
+    // $('html, body').css('max-width', $width);
   }
 
   // Mobile Menu

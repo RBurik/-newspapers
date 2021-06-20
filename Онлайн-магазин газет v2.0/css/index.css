@@ -1685,6 +1685,10 @@ h2.section-title {
     -ms-touch-action: none;
   }
 
+  .overflow {
+    overflow-x: hidden;
+  }
+
   .container {
     padding: 0 1.25rem;
   }
