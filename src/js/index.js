@@ -50,12 +50,10 @@ $(document).ready(function () {
   });
 
   // Safari Overflow
-  setTimeout(function() {
-    if ($(window).width() <= 480) {
-      let $width = $('.header').width();
-      $('html, body').css('max-width', $width);
-    }
-  }, 3000)
+  if ($(window).width() <= 480) {
+    let $width = $('.header').width();
+    $('html, body').css('max-width', $width);
+  }
 
   // Mobile Menu
   $('.burger').on("click", function () {
