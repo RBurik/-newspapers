@@ -5,5 +5,8 @@ $(document).ready(function () {
     $('.menu.mob').toggleClass('opened');
     $('body').toggleClass('fix');
     $('.burger').toggleClass('opened');
+
+    $('.header .logo img').toggleClass('active');
+    $('.header').toggleClass('active');
   })
 })

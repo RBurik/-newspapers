@@ -3,58 +3,73 @@
     font-family: $font_name;
     font-display: swap;
     src: url('../fonts/#{$file_name}.woff') format('woff'),
-      url('../fonts/#{$file_name}.woff2') format('woff2');
+    url('../fonts/#{$file_name}.woff2') format('woff2');
     font-weight: #{$weight};
     font-style: #{$style};
   }
 }
+
 @import 'fonts';
 @import 'variables';
 @import 'slider';
+
 * {
   box-sizing: border-box;
 }
+
 html {
   font-size: .833333333vw;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Roboto Mono', 'Pobeda', 'Red October', sans-serif;
 }
+
 body {
   margin: 0;
   padding: 0;
   background-color: $orange;
   color: $black;
+  overflow-x: hidden;
 }
+
 a {
   text-decoration: none;
 }
-input, textarea {
+
+input,
+textarea {
   outline: none;
 }
+
 button {
   cursor: pointer;
   outline: none;
 }
+
 .container {
   padding: 0 21.5625rem;
   width: 100%;
 }
+
 .textRed {
   color: $red;
 }
+
 // LISTS
 .bulletedList {
   padding: 0 0 0 2.5rem;
   list-style: none;
+
   li {
     font-family: 'Roboto Mono', 'Roboto', sans-serif;
     position: relative;
     font-size: .875rem;
     line-height: 1.75rem;
+
     &:not(:last-child) {
       margin-bottom: 1.875rem;
     }
+
     &:before {
       content: '';
       width: 1.25rem;
@@ -66,6 +81,7 @@ button {
     }
   }
 }
+
 button.btn {
   font-size: 1.375rem;
   font-family: 'Pobeda', sans-serif;
@@ -76,12 +92,15 @@ button.btn {
   color: #fff;
   clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%);
 }
+
 .btnRed {
   background-color: $red;
 }
+
 .btnBlack {
   background-color: $black;
 }
+
 h2.section-title {
   font-family: 'Red October', sans-serif;
   line-height: 3.375rem;
@@ -90,14 +109,17 @@ h2.section-title {
   color: $black;
   text-align: center;
 }
+
 // PC ONLY
 .pc {
   // display: inherit; // That's normal :D Don't touch!
 }
+
 // MOBILE ONLY
 .mob {
   display: none;
 }
+
 // HEADER
 .header {
   font-family: 'Pobeda', sans-serif;
@@ -107,44 +129,69 @@ h2.section-title {
   margin-top: 1.875rem;
   display: flex;
   align-items: center;
+  transition: .25s;
+
+  &.active {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+
   a {
     color: $black;
   }
+
   .nav {
     display: flex;
     align-items: center;
   }
+
   .nav-page {
     margin-right: 7.4375rem;
     font-size: 1.5rem;
+
     a:not(:last-child) {
       margin-right: 1.875rem;
     }
+
     a {
       white-space: nowrap;
     }
   }
+
   .logo {
     margin-right: 19.875rem;
+
     img {
       height: 8rem;
+      transition: .25s;
+
+      &.active {
+        transform: scale(.5) translateY(.625rem);
+      }
     }
   }
+
   .nav-block {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-    &, a {
+
+    &,
+    a {
       white-space: nowrap;
     }
   }
+
   .nav-block:first-child {
     padding-right: 1.875rem;
   }
+
   .nav-block:nth-child(2) {
     padding: 1.25rem 1.875rem;
     margin: 0;
     position: relative;
-    &:after, &:before {
+
+    &:after,
+    &:before {
       content: '';
       position: absolute;
       width: 1px;
@@ -152,39 +199,50 @@ h2.section-title {
       background-color: $black;
       top: 0;
     }
+
     &:after {
       right: 0;
     }
+
     &:before {
       left: 0;
     }
   }
+
   .nav-block:last-child {
     padding-left: 1.875rem;
   }
+
   .tel {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
+
   .social-links {
     list-style: none;
     display: flex;
     align-items: center;
+
     li:not(:last-child) {
       margin-right: 1.25rem;
     }
-    li, img {
+
+    li,
+    img {
       width: 1.125rem;
       height: 1.125rem;
     }
   }
+
   .cart {
     display: flex;
     position: relative;
+
     img {
       width: 1.625rem;
       height: 1.5rem;
     }
+
     &:before {
       content: attr(data-index);
       font-family: 'Roboto Mono', sans-serif;
@@ -203,6 +261,7 @@ h2.section-title {
     }
   }
 }
+
 .section .p-bold {
   font-weight: 500;
   font-size: 1rem;
@@ -210,20 +269,24 @@ h2.section-title {
   margin: 0 0 1.875rem 0;
   font-family: 'Roboto Mono', sans-serif;
 }
+
 .section .paragraph {
   font-size: .875rem;
   line-height: 1.75rem;
   font-family: 'Roboto Mono', sans-serif;
 }
+
 .section {
   position: relative;
   overflow-x: clip;
 }
+
 // MAIN
 .main {
   position: relative;
   overflow-x: clip;
   margin-top: 3.75rem;
+
   .container {
     display: flex;
     align-items: center;
@@ -231,12 +294,15 @@ h2.section-title {
     position: relative;
     z-index: 2;
   }
+
   img {
     width: 39.375rem;
   }
+
   .content {
     margin-right: 5.6875rem;
   }
+
   h1.title {
     margin: 0 0 1.875rem 0;
     font-family: 'Red October', sans-serif;
@@ -244,12 +310,14 @@ h2.section-title {
     line-height: 3.325rem;
     letter-spacing: .05em;
   }
+
   p.paragraph {
     margin: 0 0 3.75rem 0;
     font-size: .875rem;
     line-height: 1.75rem;
     font-family: 'Roboto Mono', sans-serif;
   }
+
   #circle3 {
     position: absolute;
     z-index: 1;
@@ -260,6 +328,7 @@ h2.section-title {
     transform: rotate(-14deg);
     margin: 0;
   }
+
   #mapBlur1 {
     position: absolute;
     z-index: 0;
@@ -269,6 +338,7 @@ h2.section-title {
     transform: rotate(30deg);
     margin: 0;
   }
+
   #mapBlur2 {
     position: absolute;
     z-index: 0;
@@ -279,8 +349,10 @@ h2.section-title {
     margin: 0;
   }
 }
+
 .section-products {
   margin-top: 7.5rem;
+
   .trigers {
     position: relative;
     z-index: 1;
@@ -288,9 +360,11 @@ h2.section-title {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+
     .triger:not(:last-child) {
       margin-right: 3.75rem;
     }
+
     .triger {
       width: 11.875rem;
       display: flex;
@@ -298,10 +372,12 @@ h2.section-title {
       position: relative;
       z-index: 1;
     }
+
     img {
       width: 3.3125rem;
       margin-right: 1.25rem;
     }
+
     h3 {
       font-family: 'Pobeda', sans-serif;
       font-size: 1.5rem;
@@ -309,6 +385,7 @@ h2.section-title {
       margin: 0;
       color: #fff;
     }
+
     &:before {
       content: '';
       width: 63.75rem;
@@ -324,6 +401,7 @@ h2.section-title {
       left: 6.5625rem;
     }
   }
+
   .wrapper-title {
     margin-top: 8.125rem;
     position: relative;
@@ -331,6 +409,7 @@ h2.section-title {
     display: flex;
     align-items: center;
     justify-content: center;
+
     h2 {
       font-size: 3.375rem;
       line-height: 3.375rem;
@@ -340,6 +419,7 @@ h2.section-title {
       z-index: 1;
       margin: 0;
     }
+
     &:before {
       content: '';
       width: 76.875rem;
@@ -355,6 +435,7 @@ h2.section-title {
       left: 0;
     }
   }
+
   .products {
     padding: 0 6.5rem;
     position: relative;
@@ -363,6 +444,7 @@ h2.section-title {
     display: flex;
     flex-flow: row wrap;
   }
+
   .product {
     width: calc(100% / 3 - (2.75rem * 2) / 3);
     display: flex;
@@ -371,16 +453,22 @@ h2.section-title {
     position: relative;
     padding: 0 1.875rem 1.25rem 1.875rem;
     background: linear-gradient(0deg, #D9CEBB 0%, rgba(217, 206, 187, 0) 100%);
+
     &:not(:nth-child(3n)) {
       margin-right: 2.375rem;
     }
-    &:first-child, &:nth-child(2), &:nth-child(3) {
+
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3) {
       margin-bottom: 2.375rem;
     }
+
     img {
       width: 15.9375rem;
       height: 11.75rem;
     }
+
     h3 {
       padding: .5rem 0 .25rem 0;
       font-family: 'Pobeda', sans-serif;
@@ -391,6 +479,7 @@ h2.section-title {
       text-align: center;
       background: linear-gradient(90deg, rgba(217, 206, 187, 0) -11.76%, #D9CEBB 49.65%, rgba(217, 206, 187, 0) 111.37%);
     }
+
     .size {
       font-size: 'Roboto', sans-serif;
       font-size: .875rem;
@@ -398,19 +487,23 @@ h2.section-title {
       letter-spacing: .03em;
       color: $black;
       margin: 0 0 3.75rem 0;
+
       &:before {
         content: 'Габариты:'; // Это слово используется в каждой карточке. Чтобы постоянно его не писать, я добавил его в Content
         margin-right: .625rem;
       }
     }
+
     .link {
       position: relative;
+
       &:hover {
         .line {
           height: 1.625rem;
         }
       }
     }
+
     .line {
       position: absolute;
       width: 100%;
@@ -419,12 +512,15 @@ h2.section-title {
       transition: .25s;
       left: 0;
     }
+
     .lineUp {
       top: 0;
     }
+
     .lineDown {
       bottom: 0;
     }
+
     .price {
       position: relative;
       z-index: 0;
@@ -437,6 +533,7 @@ h2.section-title {
       top: .9375rem;
       left: 6.4375rem;
     }
+
     .toCart {
       position: relative;
       border: none;
@@ -453,13 +550,16 @@ h2.section-title {
       font-size: 1.125rem;
       font-family: 'Pobeda', sans-serif;
       font-weight: bold;
+
       img {
         height: 1.5rem;
         width: 1.625rem;
       }
+
       &:hover {
         opacity: 1;
       }
+
       &:before {
         content: '';
         width: 1px;
@@ -471,6 +571,7 @@ h2.section-title {
       }
     }
   }
+
   #circle4 {
     position: absolute;
     z-index: 0;
@@ -481,8 +582,10 @@ h2.section-title {
     margin: 0;
   }
 }
+
 .section-specialOffer {
   margin-top: 9.375rem;
+
   .wrapper {
     background-image: url('../img/BGmaps1.jpg');
     background-color: $black;
@@ -493,6 +596,7 @@ h2.section-title {
     margin: 0 6.5625rem;
     color: #fff;
   }
+
   img.imgColumn {
     width: 20.5rem;
     height: 100%;
@@ -500,12 +604,14 @@ h2.section-title {
     margin-left: 1rem;
     margin-right: 8.625rem;
   }
+
   h3 {
     font-size: 2rem;
     line-height: 2rem;
     font-family: 'Pobeda', sans-serif;
     margin: 0 0 1.25rem 0;
   }
+
   p {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 1rem;
@@ -513,30 +619,38 @@ h2.section-title {
     margin: 0;
   }
 }
+
 .section-products2 {
   margin-top: 9.375rem;
+
   .section-title {
     margin: 0 0 3.75rem 0;
   }
+
   .products {
     margin: 0;
   }
 }
+
 .section-specialOffer2 {
   .wrapper {
     padding-top: 3.875rem;
   }
+
   h3 {
     margin-bottom: 2.5rem;
   }
+
   .wrapper {
     position: relative;
   }
+
   .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .price {
     margin: 0 3.625rem 0 0;
     font-size: 3.375rem;
@@ -544,6 +658,7 @@ h2.section-title {
     font-family: 'Pobeda', sans-serif;
     font-weight: bold;
   }
+
   .priceStrike {
     margin: 0;
     font-size: 2rem;
@@ -556,28 +671,34 @@ h2.section-title {
     right: 3.75rem;
   }
 }
+
 .section-gift {
   margin-top: 9.375rem;
+
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
   }
+
   .bulletedList {
     margin: 0;
     width: 36rem;
   }
+
   h2.section-title {
     margin: 0 0 2.625rem 0;
     line-height: 4.625rem;
   }
+
   .imgColumn {
     position: absolute;
     z-index: 2;
     width: 56.1875rem;
     right: -11.8125rem;
   }
+
   #sun1 {
     position: absolute;
     z-index: 0;
@@ -586,30 +707,38 @@ h2.section-title {
     width: 25.125rem;
   }
 }
+
 .section-reviews {
   margin-top: 17.75rem;
+
   .container {
     position: relative;
     z-index: 1;
   }
+
   h2.section-title {
     margin: 0 0 5rem 0;
     text-align: center;
   }
+
   .reviewsBlock {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
+
   .review {
     width: calc(100% / 2 - 1.875rem / 2);
     border: .1875rem solid $black;
     padding: 2.5rem;
     position: relative;
     background: $orange;
-    &:first-child, &:nth-child(2) {
+
+    &:first-child,
+    &:nth-child(2) {
       margin-bottom: 1.875rem;
     }
+
     &:before {
       content: '';
       width: 1.5rem;
@@ -622,6 +751,7 @@ h2.section-title {
       top: 2.5rem;
     }
   }
+
   p.name {
     font-family: 'Red October', sans-serif;
     font-size: 1.5rem;
@@ -629,6 +759,7 @@ h2.section-title {
     letter-spacing: .03em;
     margin: 0 0 1.25rem 0;
   }
+
   p.text {
     margin: 0;
     font-family: 'Roboto', 'Roboto Mono', sans-serif;
@@ -637,18 +768,22 @@ h2.section-title {
     line-height: 1.75rem;
     letter-spacing: .03em;
   }
+
   // SLIDER
   .slider {
     .slick-prev {
       left: 31.5rem;
     }
+
     .slick-next {
       right: 31.5rem;
     }
+
     .slick-dots {
       left: 34.875rem;
     }
   }
+
   #quote1 {
     position: absolute;
     z-index: 0;
@@ -656,6 +791,7 @@ h2.section-title {
     left: 14.9375rem;
     width: 14rem;
   }
+
   #quote2 {
     position: absolute;
     z-index: 0;
@@ -663,6 +799,7 @@ h2.section-title {
     left: 87.875rem;
     width: 20.875rem;
   }
+
   #quote3 {
     position: absolute;
     z-index: 0;
@@ -671,6 +808,7 @@ h2.section-title {
     width: 42rem;
   }
 }
+
 .footer {
   position: relative;
   overflow-x: clip;
@@ -679,17 +817,21 @@ h2.section-title {
   padding-top: 11rem;
   padding-bottom: 2.5rem;
   color: #fff;
+
   .logo {
     position: absolute;
     top: -5.6875rem;
     left: 53.6875rem;
+
     img {
       width: 12.6875rem;
     }
   }
+
   a {
     color: #fff;
   }
+
   &:before {
     content: '';
     width: 23.9375rem;
@@ -701,18 +843,23 @@ h2.section-title {
     top: -10.875rem;
     left: 48.0625rem;
   }
-  nav, hr {
+
+  nav,
+  hr {
     position: relative;
     z-index: 1;
   }
+
   .nav-page {
     margin-bottom: 4.6875rem;
     display: flex;
     align-items: center;
     justify-content: center;
+
     a:not(:last-child) {
       margin-right: 1.875rem;
     }
+
     a {
       font-family: 'Pobeda', sans-serif;
       font-size: 1.5rem;
@@ -720,6 +867,7 @@ h2.section-title {
       font-weight: bold;
     }
   }
+
   hr {
     margin: 0 0 2.5rem 0;
     border-color: $orange;
@@ -727,25 +875,30 @@ h2.section-title {
     border-left: none;
     border-right: none;
   }
+
   .bottomUI {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .copyright {
     font-family: 'Pobeda', sans-serif;
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: bold;
   }
+
   nav.nav-socLinks a:not(:last-child) {
     margin-right: 1.5rem;
   }
+
   nav.nav-socLinks a img {
     width: 1.25rem;
     height: 1.25rem;
   }
 }
+
 .popupCart {
   display: none;
   width: 100vw;
@@ -757,9 +910,11 @@ h2.section-title {
   background: $black;
   align-items: center;
   justify-content: center;
+
   &.opened {
     display: flex !important;
   }
+
   .popup {
     padding: 2.5rem;
     background: $orange;
@@ -767,12 +922,15 @@ h2.section-title {
     font-family: 'Pobeda', sans-serif;
     font-weight: bold;
   }
+
   .message {
     font-size: 1.75rem;
     line-height: 100%;
     margin: 0 0 1.875rem 0;
   }
-  button, a {
+
+  button,
+  a {
     padding: 1.125rem 2.5rem .8125rem 2.5rem;
     font-size: 1.5rem;
     line-height: 1.5rem;
@@ -782,36 +940,45 @@ h2.section-title {
     font-family: 'Pobeda', sans-serif;
     font-weight: bold;
   }
+
   a:nth-child(2) {
     margin-right: 2.1875rem;
   }
 }
+
 @media (max-width: 480px) {
   html {
     font-size: 3.333333333vw;
   }
+
   body.fix {
     overflow: hidden;
   }
+
   .container {
     padding: 0 1.25rem;
   }
+
   button.btn {
     font-size: 1.125rem;
     padding: .8125rem 2.5rem .625rem 2.5rem;
   }
+
   h2.section-title {
     line-height: 1.75rem;
     font-size: 1.75rem;
   }
+
   // PC ONLY
   .pc {
-    display: none ;
+    display: none;
   }
+
   // MOBILE ONLY
   .mob {
     display: inherit;
   }
+
   .menu.mob {
     position: fixed;
     z-index: 999;
@@ -826,23 +993,28 @@ h2.section-title {
     font-family: 'Pobeda', sans-serif;
     font-weight: bold;
     display: none;
+
     &.opened {
       display: flex !important;
     }
+
     .nav-page {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 3.75rem;
+
       a {
         color: $black;
         font-size: 1.5rem;
         line-height: 1.5rem;
       }
+
       a:not(:last-child) {
         margin-bottom: 2.5rem;
       }
     }
+
     .nav-block.tel {
       margin-bottom: auto;
       display: inline-flex;
@@ -855,6 +1027,7 @@ h2.section-title {
       font-size: 1.125rem;
       line-height: 1.125rem;
       font-weight: bold;
+
       &:before {
         content: '';
         width: 3.625rem;
@@ -864,25 +1037,31 @@ h2.section-title {
         background: $black;
       }
     }
+
     .nav-block.social-links {
       margin-bottom: auto;
     }
+
     .nav-block.social-links a {
       &:not(:last-child) {
         margin-right: 1.875rem;
       }
+
       img {
         width: 1.125rem;
         height: 1.125rem;
       }
     }
+
     .rules {
       margin-top: 1.25rem;
       justify-self: flex-end;
     }
+
     .rules a:not(:last-child) {
       margin-right: 2.5rem;
     }
+
     .rules a {
       color: $black;
       font-size: 1.125rem;
@@ -891,24 +1070,30 @@ h2.section-title {
       font-weight: bold;
     }
   }
+
   // LISTS
   .bulletedList {
     padding: 0 0 0 1.875rem;
+
     li {
       font-size: .75rem;
       line-height: 1.625rem;
+
       &:not(:last-child) {
         margin-bottom: 1.25rem;
       }
+
       &:before {
         left: -1.875rem;
         top: .75rem;
       }
     }
   }
+
   // HEADER
   .header {
     padding: 0 3.125rem;
+
     .burger {
       margin-right: 6.3125rem; // Margin from the small red stripe
       border: none;
@@ -917,7 +1102,9 @@ h2.section-title {
       background: $red;
       position: relative;
       transition: .15s;
-      &:before, &:after {
+
+      &:before,
+      &:after {
         transition: .15s;
         content: '';
         display: block;
@@ -928,85 +1115,109 @@ h2.section-title {
         left: 0;
         transform: rotate(0deg);
       }
+
       &:before {
         top: -.5625rem;
       }
+
       &:after {
         bottom: -.5625rem;
       }
+
       &.opened {
         background-color: inherit;
+
         &:before {
           transform: rotate(45deg);
           top: 0;
         }
+
         &:after {
           transform: rotate(-45deg);
           bottom: 0;
         }
       }
     }
+
     .nav {
       display: flex;
       align-items: center;
     }
+
     .logo {
       margin-right: 5.6875rem;
+
       img {
         height: 5.625rem;
       }
     }
+
     .nav-block {
       padding: 0;
     }
-    .nav-page, .nav-block:first-child, .nav-block:nth-child(2) {
+
+    .nav-page,
+    .nav-block:first-child,
+    .nav-block:nth-child(2) {
       display: none;
     }
+
     .nav-block:last-child {
       padding-left: 0;
     }
+
     .cart {
       img {
         width: 2rem;
         height: 1.8125rem;
       }
+
       &:before {
         padding: .125rem;
         bottom: 0;
       }
     }
   }
+
   .main {
     margin-top: 3.75rem;
     text-align: center;
+
     .container {
       flex-direction: column;
     }
+
     img {
       position: absolute;
       width: calc(100% - 1.25rem * 2);
       top: 3.625rem;
     }
+
     .content {
       margin-right: 0;
     }
+
     h1.title {
       margin: 0 0 18.75rem 0;
     }
+
     p.paragraph {
       margin: 0 0 1.875rem 0;
     }
+
     #circle3 {
       top: 12.1875rem;
       left: -6.25rem;
       width: 13.8125rem;
       height: 13.8125rem;
     }
+
     #mapBlur1 {
       top: 2rem;
       left: -4rem;
       width: 11.875rem;
     }
+
     #mapBlur2 {
       opacity: .25;
       top: 18.0625rem;
@@ -1014,19 +1225,24 @@ h2.section-title {
       width: 20.875rem;
     }
   }
+
   .section-products {
     margin-top: 6.875rem;
+
     .trigers {
       display: none;
     }
+
     .wrapper-title {
       margin-top: 0;
       flex-flow: row wrap;
       padding: 0 3.5625rem;
+
       h2 {
         font-size: 1.75rem;
         line-height: 1.75rem;
       }
+
       &:before {
         width: 36.125rem;
         height: 9.5625rem;
@@ -1034,47 +1250,62 @@ h2.section-title {
         left: -2.875rem;
       }
     }
+
     .products {
       padding: 0;
       margin-top: 2.5rem;
     }
+
     .product {
       width: auto;
       padding: 0 1.25rem 1.5625rem 1.25rem;
+
       &:not(:nth-child(3n)) {
         margin-right: 0;
       }
+
       &:not(:nth-child(2n)) {
         margin-right: 1.25rem;
       }
-      &:first-child, &:nth-child(2), &:nth-child(3) {
+
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3) {
         margin-bottom: 0
       }
-      &:not(:last-child), &:not(:nth-child(n - 1)) {
+
+      &:not(:last-child),
+      &:not(:nth-child(n - 1)) {
         margin-bottom: 1.25rem;
       }
+
       img {
         width: 10.625rem;
         height: 7.875rem;
       }
+
       h3 {
         font-size: 1rem;
         line-height: 1rem;
         margin: 1.25rem 0 .875rem 0;
       }
+
       .size {
         font-size: .75rem;
         line-height: .75rem;
         margin: 0 0 1.875rem 0;
       }
+
       .link {
         width: 100%;
+
         &:hover {
           .line {
             height: 1px;
           }
         }
       }
+
       .price {
         font-size: 1rem;
         line-height: 1rem;
@@ -1083,25 +1314,31 @@ h2.section-title {
         padding: .9375rem 0;
         margin-bottom: 1rem;
       }
+
       .lineDown {
         top: 2.875rem;
       }
+
       .toCart {
         justify-content: center;
         opacity: 1;
         padding: .9375rem .9375rem .875rem .9375rem;
         width: 100%;
+
         img {
           display: none;
         }
+
         &:hover {
           opacity: 1;
         }
+
         &:before {
           display: none;
         }
       }
     }
+
     #circle4 {
       opacity: .5;
       top: -35.8125rem;
@@ -1110,8 +1347,10 @@ h2.section-title {
       height: 43.4375rem;
     }
   }
+
   .section-specialOffer {
     margin-top: 7.5rem;
+
     .wrapper {
       background-position: right;
       flex-direction: column;
@@ -1119,80 +1358,101 @@ h2.section-title {
       margin: 0 -1.25rem;
       text-align: center;
     }
+
     img.imgColumn {
       height: 15.625rem;
       margin: -7.5rem auto 2.5rem auto;
     }
+
     h3 {
       font-size: 1.5rem;
       line-height: 1.5rem;
     }
+
     p {
       font-size: .75rem;
       line-height: 1.6875rem;
     }
   }
+
   .section-products2 {
     margin-top: 7.5rem;
+
     .section-title {
       margin: 0 0 1.875rem 0;
     }
   }
+
   .section-specialOffer2 {
     margin-top: 7.5rem;
+
     .wrapper {
       padding: 3.75rem 1.875rem;
     }
+
     h3 {
       margin-bottom: 1.25rem;
     }
+
     .wrapper {
       text-align: center;
       position: relative;
     }
+
     .inner {
       flex-direction: column;
       align-items: center;
     }
+
     .price {
       margin: 1.25rem 0 1.875rem 0;
       font-size: 2rem;
       line-height: 2rem;
     }
+
     .priceStrike {
       font-size: 1.5rem;
       line-height: 1.5rem;
       position: inherit;
     }
   }
+
   .section-gift {
     margin-top: 6.25rem;
+
     .bulletedList {
       width: 100%;
     }
+
     h2.section-title {
       margin: 0 0 33.125rem 0;
       line-height: 2.375rem;
     }
+
     .imgColumn {
       width: calc(100% + 3.25rem * 2);
       right: -3.25rem;
       top: 6.625rem;
     }
+
     #sun1 {
       top: -2.625rem;
       left: 11.8125rem;
       width: 25.125rem;
     }
   }
+
   .section-reviews {
     margin-top: 7.5rem;
+
     h2.section-title {
       margin: 0 0 1.875rem 0;
     }
+
     .slider {
       margin: 0 -1.25rem;
     }
+
     .reviewsBlock {
       margin: 0 1.25rem;
       display: block;
@@ -1200,6 +1460,7 @@ h2.section-title {
       padding: 2.5rem 1.875rem;
       position: relative;
       background: $orange;
+
       &:before {
         content: '';
         width: 1.5rem;
@@ -1212,69 +1473,87 @@ h2.section-title {
         top: 1.875rem;
       }
     }
+
     p.name {
       font-size: 1.125rem;
       line-height: 1.125rem;
     }
+
     p.text {
       font-size: .75rem;
       line-height: 1.625rem;
     }
+
     // SLIDER
     .slider {
       .slick-prev {
         left: 10.1875rem;
       }
+
       .slick-next {
         right: 10.1875rem;
       }
+
       .slick-dots {
         left: 12.25rem;
       }
     }
+
     #quote1 {
       top: -5.375rem;
       left: 17.25rem;
       width: 14rem;
     }
+
     #quote2 {
       display: none;
     }
+
     #quote3 {
       bottom: -12.5625rem;
       left: -13.75rem;
       width: 20.875rem;
     }
   }
+
   .footer {
     margin-top: 15.5625rem;
     padding-top: 4.8125rem;
     padding-bottom: 3.5625rem;
+
     .logo {
       display: block;
       top: -3.75rem;
       left: 11rem;
+
       img {
         width: 8rem;
       }
     }
+
     &:before {
       width: 10.9375rem;
       height: 10.9375rem;
       top: -5.5rem;
       left: 9.5rem;
     }
-    nav, hr, a {
+
+    nav,
+    hr,
+    a {
       display: none;
     }
+
     .nav-page {
       display: none;
     }
+
     .bottomUI {
       justify-content: center;
       position: relative;
       z-index: 1;
     }
+
     .copyright {
       font-size: 1rem;
       line-height: 1rem;
