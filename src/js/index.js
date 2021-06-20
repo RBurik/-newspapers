@@ -56,7 +56,7 @@ $(document).ready(function () {
       $('html, body').css('max-width', $width);
       console.log($width);
     }
-  }, 1000)
+  }, 3000)
 
   // Mobile Menu
   $('.burger').on("click", function () {
