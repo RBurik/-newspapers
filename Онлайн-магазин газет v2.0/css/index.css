@@ -198,6 +198,8 @@ html {
   padding: 0;
   font-family: 'Roboto', 'Roboto Mono', 'Pobeda', 'Red October', sans-serif;
   overflow-x: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 body {
@@ -206,6 +208,8 @@ body {
   background-color: #EBE5D9;
   color: #514947;
   overflow-x: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 a {
