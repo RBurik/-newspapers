@@ -215,7 +215,7 @@ body {
   overflow-x: hidden;
 }
 
-.overflow .fix {
+.overflow.fix {
   overflow: hidden;
   touch-action: none;
   -ms-touch-action: none;
