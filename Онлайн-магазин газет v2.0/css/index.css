@@ -199,11 +199,6 @@ html {
   font-family: 'Roboto', 'Roboto Mono', 'Pobeda', 'Red October', sans-serif;
 }
 
-.overflow {
-  touch-action: none;
-  -ms-touch-action: none;
-}
-
 body {
   margin: 0;
   padding: 0;
