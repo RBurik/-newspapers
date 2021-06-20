@@ -54,7 +54,6 @@ $(document).ready(function () {
     if ($(window).width() <= 480) {
       let $width = $('.header').width();
       $('html, body').css('max-width', $width);
-      console.log($width);
     }
   }, 3000)
 

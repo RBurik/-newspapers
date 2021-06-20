@@ -1313,6 +1313,8 @@ h2.section-title {
 
   body.fix {
     overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
   }
 
   .container {
