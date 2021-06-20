@@ -197,6 +197,8 @@ html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Roboto Mono', 'Pobeda', 'Red October', sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
 body {
@@ -204,7 +206,19 @@ body {
   padding: 0;
   background-color: #EBE5D9;
   color: #514947;
+  position: relative;
   overflow-x: hidden;
+}
+
+.overflow {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.overflow.fix {
+  overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 a {

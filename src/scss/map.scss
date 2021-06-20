@@ -22,6 +22,8 @@ html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Roboto Mono', 'Pobeda', 'Red October', sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,7 +31,19 @@ body {
   padding: 0;
   background-color: $orange;
   color: $black;
+  position: relative;
   overflow-x: hidden;
+}
+
+.overflow {
+  position: relative;
+  overflow-x: hidden;
+
+  &.fix {
+    overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
+  }
 }
 
 a {
@@ -949,10 +963,6 @@ h2.section-title {
 @media (max-width: 480px) {
   html {
     font-size: 3.333333333vw;
-  }
-
-  body.fix {
-    overflow: hidden;
   }
 
   .container {
