@@ -49,12 +49,6 @@ $(document).ready(function () {
     ]
   });
 
-  // Safari Overflow
-  if ($(window).width() <= 480) {
-    // let $width = $(window).width();
-    // $('html, body').css('max-width', $width);
-  }
-
   // Mobile Menu
   $('.burger').on("click", function () {
     $('.menu.mob').slideToggle(150);
