@@ -209,6 +209,8 @@ body {
 
 body.fix {
   overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 a {
