@@ -51,7 +51,7 @@ $(document).ready(function () {
 
   // Safari Overflow
   if ($(window).width() <= 480) {
-    let $width = $('.header').width();
+    let $width = $(window).width();
     $('html, body').css('max-width', $width);
   }
 
