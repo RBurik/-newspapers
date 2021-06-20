@@ -35,6 +35,17 @@ body {
   overflow-x: hidden;
 }
 
+.overflow {
+  position: relative;
+  overflow-x: hidden;
+
+  .fix {
+    overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -1308,17 +1319,6 @@ h2.section-title {
 @media (max-width: 480px) {
   html {
     font-size: 3.333333333vw;
-  }
-
-  body.fix {
-    overflow: hidden;
-    touch-action: none;
-    -ms-touch-action: none;
-  }
-
-  .overflow {
-    position: relative;
-    overflow-x: hidden;
   }
 
   .container {

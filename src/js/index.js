@@ -53,7 +53,7 @@ $(document).ready(function () {
   $('.burger').on("click", function () {
     $('.menu.mob').slideToggle(150);
     $('.menu.mob').toggleClass('opened');
-    $('body').toggleClass('fix');
+    $('.overflow').toggleClass('fix');
     $('.burger').toggleClass('opened');
 
     $('.header .logo img').toggleClass('active');
